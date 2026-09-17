@@ -2,7 +2,7 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
-// This is the main file, if you'd like to contribute to botplate, please read the CONTRIBUTING.md file.
+// src/main.rs
 
 #![allow(clippy::unreadable_literal)]
 #![allow(clippy::print_stdout)]
