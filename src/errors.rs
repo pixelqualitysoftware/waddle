@@ -26,6 +26,12 @@ impl fmt::Display for Error {
 
 impl std::error::Error for Error {}
 
+impl From<std::io::Error> for Error {
+    fn from(e: std::io::Error) -> Self {
+        Error::Custom(e.to_string())
+    }
+}
+
 impl From<poise::serenity_prelude::Error> for Error {
     fn from(e: poise::serenity_prelude::Error) -> Self {
         Error::Discord(Box::new(e))

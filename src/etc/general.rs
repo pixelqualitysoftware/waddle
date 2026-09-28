@@ -43,13 +43,13 @@ pub async fn info(ctx: poise::Context<'_, crate::Data, Error>) -> Result<(), Err
             false,
         )
         .field(
-            "Host Uptime",
-            helpers::convert_uptime_2_human(sys.h_uptime),
+            "OS",
+            sys.os_name.unwrap_or_else(|| "Unknown".to_string()),
             false,
         )
         .field(
-            "OS",
-            sys.os_name.unwrap_or_else(|| "Unknown".to_string()),
+            "Host Uptime",
+            helpers::convert_uptime_2_human(sys.h_uptime),
             false,
         )
         .field(
