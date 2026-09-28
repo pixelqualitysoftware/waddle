@@ -38,7 +38,6 @@ pub fn random_footer() -> CreateEmbedFooter {
     let mut rng = rand::rng();
     let version = env!("CARGO_PKG_VERSION");
     let messages = [
-        "botplate-rs is cool",
         "check out our github repo!",
         "how random is random..?",
         "tuxzilla is in your walls",
